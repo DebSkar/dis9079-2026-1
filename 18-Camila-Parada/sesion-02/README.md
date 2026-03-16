@@ -46,18 +46,17 @@ A la par se han de instalar "Bibliotecas": "Arduino MQTTClient" (Arduino) y "Ard
 
 Acerca de las versiones, se han de manejar según este tipo de numerología ["Versionamiento Semántico"](https://semver.org/lang/es/) "0.0.0". El último dígito indica un número que cuando asciende significa que han arreglado errores de las versiones anteriores. Al medio signifa que ha sido un cambio significativo de la versión, y ya el primer dígito indica que es una versión nueva que deja de ser compatible con la anterior.
 
-Los arduinos R3 poseen un chip "atmega328p" (2011).
+Los arduinos R3 poseen un chip "atmega328p" (2011). Estos se manejan en millis/ milisegundos.
 El 2024 es que llegaron los R4 tipo mínima y los [R4 wifi](https://mcielectronics.cl/shop/product/43402).
 
 ***
 
-## 
+## Revisando el ejemplo 
 
 ***
 
 ## Links varios
 
 - https://github.com/eclipse-mosquitto/mosquitto
-- Link 2
-- https://www.dwbowen.com/telepresent-wind
-- https://www.aaronkoblin.com
+- https://mechanic.design
+- https://art.cmu.edu/news/school/drawing-with-machines-artworks/
