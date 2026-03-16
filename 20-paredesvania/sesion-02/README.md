@@ -23,6 +23,20 @@ Bibliotecas: MQTT
 - Placa
 - Software (editor)
 - Lenguaje
+  
 
-- Setup: instrucciones
-- Loop: Repite infinito
+- **Setup:** instrucciones
+- **Loop:** Repite infinito
+
+**mosquitto** es un broker (intermediario) de MQTT, que se encarga de recibir y distribuir mensajes entre clientes MQTTT.
+
+**MQTT:** (Message Queuing Telemetry Transport) es un protocolo de mensajería ligero, de código abierto y basado en el modelo publicación-suscripción, diseñado para comunicación máquina a máquina (M2M) y el Internet de las Cosas (IoT). Funciona bajo TCP/IP y es ideal para dispositivos con recursos limitados, bajo ancho de banda o redes inestables.
+
+- MQTT esta sobre wifi
+
+Broker: Los numeritos del wifi 
+Port: 1883
+
+#### Solemne 1
+
+Conectar Dos placas distintas.
