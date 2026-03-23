@@ -10,6 +10,8 @@ En dos semanas más es la `solemne 1`
 
 - Cuidar las patitas del Arduino Uno R4
 
+Ver el primer capítulo de Monty Python
+
 Usaremos un nuevo microcontrolador, donde solo recibiremos mensajes y el Arduino Uno R4 solo enviaremos mensajes. 
 
 ### Microcontrolador: Raspberry Pi Pico 2 W
@@ -51,3 +53,136 @@ RP2350 chip
 - `Meet Daisy:` es un microcontrolador para audios (un mega microcontrolador)
 - Electro-smith
 - `Chompi sampler:` hay un electro-smith de 20 lucas
+
+### Descargar: Visual Studio Code
+
+Claude code: Ia para generar códigos
+
+- Extensions: lugar para descargar
+- Rust: lenguaje por el cual quieren cambiar C++, es más seguro
+- Python: lenguaje para computadores
+  - micropython: es más sencillo
+- Board type: seleccionar la placa
+- Select Pico SDK version: seleccionar la veersion
+- SPI: se conecta a una pantalla
+- I2C: menos conexiones
+- Stdio support: input / ouptup
+- Pico W onboard LED
+- Build: es como el subproducto del final, donde hago cambios y ahí quedan
+- Lo importante es que tenga el: `nombre.cpp` (apretar el botón de hacerlo con c++)
+- Raspberry Pi, tiene un Main, todo lo que esta adentro de main ocurre,
+
+### Ejemplo 
+
+Prendió una lucecita permanente
+
+```cpp
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/spi.h"
+#include "pico/cyw43_arch.h"
+
+// SPI Defines
+// We are going to use SPI 0, and allocate it to the following GPIO pins
+// Pins can be changed, see the GPIO function select table in the datasheet for information on GPIO assignments
+#define SPI_PORT spi0
+#define PIN_MISO 16
+#define PIN_CS   17
+#define PIN_SCK  18
+#define PIN_MOSI 19
+
+
+
+
+int main()
+{
+    stdio_init_all();
+
+    // Initialise the Wi-Fi chip
+    if (cyw43_arch_init()) {
+        printf("Wi-Fi init failed\n");
+        return -1;
+    }
+
+    // SPI initialisation. This example will use SPI at 1MHz.
+    spi_init(SPI_PORT, 1000*1000);
+    gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
+    gpio_set_function(PIN_CS,   GPIO_FUNC_SIO);
+    gpio_set_function(PIN_SCK,  GPIO_FUNC_SPI);
+    gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
+    
+    // Chip select is active-low, so we'll initialise it to a driven-high state
+    gpio_set_dir(PIN_CS, GPIO_OUT);
+    gpio_put(PIN_CS, 1);
+    // For more examples of SPI use see https://github.com/raspberrypi/pico-examples/tree/master/spi
+
+    // Example to turn on the Pico W LED
+    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
+
+    while (true) {
+        printf("Hello, world!\n");
+        sleep_ms(1000);
+    }
+}
+```
+
+Prender la lucecita 3 veces y que qued encendida :)
+
+```cpp
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/spi.h"
+#include "pico/cyw43_arch.h"
+
+// SPI Defines
+// We are going to use SPI 0, and allocate it to the following GPIO pins
+// Pins can be changed, see the GPIO function select table in the datasheet for information on GPIO assignments
+#define SPI_PORT spi0
+#define PIN_MISO 16
+#define PIN_CS   17
+#define PIN_SCK  18
+#define PIN_MOSI 19
+
+
+
+
+int main()
+{
+    stdio_init_all();
+
+    // Initialise the Wi-Fi chip
+    if (cyw43_arch_init()) {
+        printf("Wi-Fi init failed\n");
+        return -1;
+    }
+
+    // SPI initialisation. This example will use SPI at 1MHz.
+    spi_init(SPI_PORT, 1000*1000);
+    gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
+    gpio_set_function(PIN_CS,   GPIO_FUNC_SIO);
+    gpio_set_function(PIN_SCK,  GPIO_FUNC_SPI);
+    gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
+    
+    // Chip select is active-low, so we'll initialise it to a driven-high state
+    gpio_set_dir(PIN_CS, GPIO_OUT);
+    gpio_put(PIN_CS, 1);
+    // For more examples of SPI use see https://github.com/raspberrypi/pico-examples/tree/master/spi
+
+    // Example: turn on the Pico W LED and blink it 3 times
+    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
+    printf("LED encendida. Parpadeo 3 veces...\n");
+
+    for (int i = 0; i < 3; i++) {
+        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0); // LED off
+        sleep_ms(250);
+        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1); // LED on
+        sleep_ms(250);
+    }
+
+    printf("Listo: parpadeo completado. LED queda encendida.\n");
+
+    while (true) {
+        tight_loop_contents();
+    }
+}
+```
