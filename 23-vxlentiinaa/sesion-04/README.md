@@ -25,4 +25,7 @@ lunes 30 marzo 2026
 - sobre wifi se usa la estrategia mqtt
 - UDP: mensajes entre canales > [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol)
 - `Simple webserver` en arduino docs > [SIMPLE WEBSERVER WIFI](https://docs.arduino.cc/retired/library-examples/wifi-library/SimpleWebServerWiFi/)
-- 
+
+---
+
+- Mandar cosas raras desde el arduino a la raspberry pi y que el computador responda.
