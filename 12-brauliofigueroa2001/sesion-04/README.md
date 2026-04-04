@@ -139,3 +139,9 @@ Serial.println("Luz apagada. ");
 }
 }
 ```
+
+### avances e investigación 4 de abril
+
+- paso a paso de la instalación de la librería de adafruit IO en el software de Arduino
+
+
