@@ -23,3 +23,9 @@ empezar a investigar cómo crear códigos y preguntar bien a la ia que poder hac
 ⅞ pasos
 
 Claude shannon la teoría de la información, describir cómo elementos se pueden comunicar 
+
+![teoria de la comunicacion](./imagenes/teoria-de-la-comunicacion.png)
+
+modelo osi
+
+![modelo osi](./imagenes/osi-model.png)
