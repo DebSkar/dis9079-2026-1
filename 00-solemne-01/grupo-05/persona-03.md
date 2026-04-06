@@ -59,6 +59,14 @@ La actualización realmente se toma su tiempo, ha pasado una hora desde que empe
 
 Okay, ha pasado un poco más de hora y media y aún no se termina de actualizar, terminaré esta misión mañana.
 
+Mis placas están en coma, en recuperación con el doctor aarón.
+
+Por mientras subí el código ahora con un arduino mañoso que funciona cuando quiere y no tiene la acrtualización, pero ahora me apareció mas info en el monitor serial.
+
+![yuju](./imagenes/masquepuntos.png)
+
+Por otro lado, cami pudo enviar desde su compu, así que perfect, ahora queremos modificar el código para que envíe algo más que números. seguimos trabajando.
+
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
 ## Rafael Lozano-Hemmer
