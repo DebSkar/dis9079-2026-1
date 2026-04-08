@@ -4,7 +4,7 @@ investigaciones individuales
 
 ## sobre adafruit i/o
 
-- instalación adafruit io 4 de abril (sacado de mi bitácora)
+- instalación adafruit io 4 de abril (sacado de mi bitácora clase 4)
 
 ![instalacion](./imagenes/instalacionIndividual1.JPG)
 
@@ -19,6 +19,19 @@ investigaciones individuales
 - así termina la instalación, luego creamos nuestra cuenta en Adafruit
 
 ![cuenta](./imagenes/creandoCuentabraulio.JPG)
+
+- creamos cuenta con nuestro correo, debiera aparecer un ícono amarillo arriba a la derecha, con mis credenciales, no me aparece nada
+
+- descargar los archivos .ino y .h que dejo aarón en mi respectivo grupo 08 en github
+
+- lo hice mal al principio, me dio este error
+
+![error](./imagenes/error1config.JPG)
+
+- después me acordé que el archivo .h debía estar al lado del .ino en pestañas, es decir, tenían que estar en la misma carpeta lol. Esto lo aprendí el año pasado pero se me había olvidado, si no estaban de esta forma el arduino no iba a encontrar el .h por más que lo tuviera descargado
+
+
+
 
 
 
@@ -49,6 +62,8 @@ código con adafruit IO
 - adafruit IO también se puede utilizar con código, tienen librerías de CircuitPython, Arduino, Python y más, en nuestro caso utilizaremos las librerías para arduino, específicamente Adafruit IO Arduino
 
 (agregar un poco más de info general)
+
+- información sacada de la página de adafruit io y traducida con IA
 
 AVANCES 6 DE ABRIL, SACADOS DE BITÁCORA CLASE 4
 
