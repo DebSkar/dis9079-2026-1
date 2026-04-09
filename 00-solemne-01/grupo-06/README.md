@@ -6,7 +6,19 @@
 * Isidora Andrea Pérez Maulén / <https://github.com/arevalourra/dis9079-2026-1/tree/main/21-isipm08>
 * Nicolás Elías Valdés Greve / <https://github.com/arevalourra/dis9079-2026-1/tree/main/29-nicolasvaldesgreve>
 
+---
+
 ## Descripción del proyecto
+
+El proyecto que realizaremos consiste en la comunicación entre dos placas (Arduino Uno R4 Wifi - Raspberry Pi Pico 2W) conectadas a distintos computadores mediante internet (llamado "si"), utilizando Adafruit IO como intermediario. La idea principal de nuestro proyecto es enviar información desde un dispositivo físico y representarla en otro en tiempo real. 
+
+En este caso, los componentes que utilizamos son:
++ Potenciómetro conectado a Arduino Uno R4 Wifi, el cual envía valores a la nube.
++ LED
++ Resistencia de 220 Ω
++ Cables Dupont para formar la conexión entre las placas y componentes
+  
+---
 
 ## Sistema Enviar
 
@@ -28,6 +40,8 @@ Luego, si presionábamos en el feed de ``brillo-led``, nos permitía ver un grá
 
 ![Gráfico de información que recibió Adafruit](./imagenes/pruebabrilloledadafruitio.png)
 
+---
+
 ## Sistema Recibir
 
 Como nuestra idea era poder controlar el brillo del LED de una placa a otra, decidimos que en la Raspberry iría el LED ya que en ya habíamos logrado conectar el potenciómetro al Arduino. Como no sabíamos como hacer conexiones con ésta placa y no entendímos los textos que habían en ella, tuvimos que buscar imagenes de referencia para poder reconocer los Pins de la placa y para qué sirve cada una, por lo que encontramos ésta imagen:
@@ -46,11 +60,15 @@ Cuando por fin subimos el código, nos salió un error en donde se menciona un p
 
 ![Error de puerto en Raspberry Pi Pico 2 W](./imagenes/error-arduinoide.jpeg)
 
+---
 
-## Aarón nos ayuda en el Lid
+## Aarón nos ayuda en el LID
+
+Como 
 
 ![Aarón corrigiendo nuestro código](./imagenes/ayudadeaaronenlid.jpeg)
 
+---
 
 ## Prueba sin potenciómetro
 
@@ -62,14 +80,8 @@ Cuando por fin subimos el código, nos salió un error en donde se menciona un p
 
 ![Arreglo en declaración de LED](./imagenes/leddeclarado.jpeg)
 
-El proyecto que realizaremos consiste en la comunicación entre dos placas (Arduino Uno R4 Wifi - Raspberry Pi Pico 2W) conectadas a distintos computadores mediante internet (llamado "si"), utilizando Adafruit IO como intermediario. La idea principal de nuestro proyecto es enviar información desde un dispositivo físico y representarla en otro en tiempo real. 
+---
 
-En este caso, los componentes que utilizamos son:
-+ Potenciómetro conectado a Arduino Uno R4 Wifi, el cual envía valores a la nube.
-+ 
-
-Utilizamos esta imagen como referencia para guiarnos a través del Raspberry Pi PICO 2W 
-![Identificación de pins Raspberry Pi Pico 2 W](./imagenes/pins-raspberry.jpeg) 
 ## Materiales usados en Solemne-01
 
 | Componente | Cantidad | Valor Unidad | Link |
@@ -87,7 +99,44 @@ Utilizamos esta imagen como referencia para guiarnos a través del Raspberry Pi 
 ### Código para enviar
 
 ```cpp
-// rellenar
+#include <WiFiS3.h>
+#include "AdafruitIO_WiFi.h"
+
+// nombre wifi y contraseña
+#define WIFI_SSID "si"
+#define WIFI_PASS "mailo6192"
+
+//credenciales Adafruit IO
+#define IO_USERNAME  "userdeAdafruit"
+#define IO_KEY       "KeydeAdafruit"
+
+//aquí va la variable con el nombre del feed
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+AdafruitIO_Feed *potenciometro = io.feed("nicolasvaldesgreve-potenciometro");
+
+int potPin = A0;
+
+void setup() {
+
+  //la velocidad la dejamos de 9600 baud como el standard, prender monitor serial
+  Serial.begin(9600);
+  io.connect();
+
+  while(io.status() < AIO_CONNECTED) {
+    delay(500);
+  }
+}
+
+void loop() {
+  io.run();
+
+  int valor = analogRead(potPin);
+  int valorMap = map(valor, 0, 1023, 0, 100);
+
+  potenciometro->save(valorMap);
+
+  delay(1000);
+}
 ```
 
 ### Código para recibir
