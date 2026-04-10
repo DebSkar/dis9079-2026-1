@@ -1,10 +1,10 @@
-# grupo-xx
+# grupo-07
 
 ## integrantes
 
-* nombre completo
-* nombre completo
-* nombre completo
+* Josefa Araya 
+* Débora Soto 
+* Cristóbal Vergara
 
 ## descripción del proyecto
 
