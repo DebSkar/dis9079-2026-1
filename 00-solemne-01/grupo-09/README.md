@@ -33,6 +33,12 @@ El mismo Arduino lee esos datos desde el feed y actúa en consecuencia.
 ### código para enviar
 
 ```cpp
+//rellenar
+```
+
+### código para recibir
+
+```cpp
 #include "AdafruitIO_WiFi.h"
 
 #define WIFI_SSID "bla"
@@ -80,14 +86,7 @@ void setup() {
 void loop() {
   io.run();
   delay(100);  
-}
-```
-
-### código para recibir
-
-```cpp
-// rellenar
-```
+}```
 
 
 ## proceso
