@@ -276,6 +276,8 @@ Luego probamos el código en clases, donde si compiló y enviaba los datos corre
 
 ### Hedy Lamarr
 
+<img src="./imagenes/vxlentiinaa_imagenes/hedy_lamarr.jpg" alt="hedy" width="300">
+
 `¿Quién es Hedy Lamarr?`
 
 - Hedwig Eva Maria Kiesler, conocida como Hedy Lamarr, fue una ingeniera, actriz de cine e inventora austriaca. Más alla de ser conocida como actriz, fue una inventora que, junto a George Antheil, desarrolló una tecnología revolucionaria en la cual se convertiría en la base para las comunicaciones inalámbricas modernas. Inventó la primera versión del wifi, que permitiría las comunicaciones inalámbricas a largas distancias. Su invento, basado en el uso del espectro ensanchado por salto de frecuencia, ha influido enormemente en el desarrollo de redes inalámbricas como el wifi, el Bluetooth y otros sistemas de transmisión de datos.
@@ -285,6 +287,8 @@ Luego probamos el código en clases, donde si compiló y enviaba los datos corre
 `¿Qué inventó Hedy Lamarr?`
 
 - Durante la Segunda Guerra Mundial, Lamarr y Antheil patentaron un sistema para controlar torpedos de manera inalámbrica y segura, evitando que fueran interceptados o bloqueados por el enemigo. Este sistema usaba una técnica llamada espectro ensanchado por salto de frecuencia, que permite que una señal de radio cambie rápidamente entre diferentes frecuencias dentro del espectro de frecuencias.
+
+<img src="./imagenes/vxlentiinaa_imagenes/hedy_wifi.png" alt="wifi" width="250">
 
 `¿Cómo funciona el espectro ensanchado por salto de frecuencia?`
 
