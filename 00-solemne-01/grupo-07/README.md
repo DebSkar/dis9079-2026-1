@@ -15,7 +15,9 @@ Partimos utilizando el código de ejemplo que subió Aaron a Github, para aprend
 Luego de solucionar eso el código estaba bien, pero aún así no se conectaba, solo aparecía una serie de puntos infinitos (...........) que no nos dimos cuenta, hasta que en clases Aaron actualizó los Arduinos que tenian ese error y se solucionó, resulta que al final de los puntos habia un mensaje de "Please upgrade the WiFiS3 firmware!" pero no alcanzaba a verse.
 Una vez actualizado el Arduino pudimos conectar bien con Adafruit IO y probamos con un ejercicio que nos dió Aaron, que consistía en conectarse a un feed en Adafruit IO el cual estaba conectado a una Dashboard con un contador,ese ejercicio si funcionó.
 
-Luego de los intentos fallidos de la clase pasada, seguíamos con las ganas de controlar el LED conectado al Arduino, mediante el dashboard de Adafruit IO, así que investigamos un poco en blogs, foros y github pero no logramos crear el código desde 0 así que acudimos a Claude AI con lo que queriamos hacer.
+Durante la clase del lunes 06, quisimos intentar lograr prender un led conectado a una protoboard, pero ningún código nos funcionó.
+
+Luego de esos intentos fallidos de la clase pasada, seguíamos con las ganas de controlar el LED conectado al Arduino, mediante el dashboard de Adafruit IO, así que investigamos un poco en blogs, foros y github pero no logramos crear el código desde 0 así que acudimos a Claude AI con lo que queriamos hacer.
 
 le escribimos el siguiente prompt:
 
