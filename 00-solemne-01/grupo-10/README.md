@@ -181,3 +181,30 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 [antfuentealba](./persona-03.md)
 
 ## bibliografía
+- Adafruit Industries. *Welcome to Adafruit IO*.  
+  https://learn.adafruit.com/welcome-to-adafruit-io  
+
+- Adafruit Industries. *Adafruit IO Basics: Dashboards*.  
+  https://learn.adafruit.com/adafruit-io-basics-dashboards  
+
+- Adafruit Industries. *Adafruit IO Basics: Digital Input*.  
+  https://learn.adafruit.com/adafruit-io-basics-digital-input  
+
+- Adafruit IO. *Plataforma oficial*.  
+  https://io.adafruit.com  
+
+- Arduino Documentation. *UNO R4 WiFi Examples*.  
+  https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/  
+
+- Wikipedia. *MQTT (Message Queuing Telemetry Transport)*.  
+  https://en.wikipedia.org/wiki/MQTT  
+
+- Wikipedia. *Internet of Things (IoT)*.  
+  https://en.wikipedia.org/wiki/Internet_of_things  
+
+- Arduino Documentation. *Arduino IDE*.  
+  https://docs.arduino.cc/software/ide/  
+
+- Adafruit Learning System. *Adafruit IO Arduino Library*.  
+  https://learn.adafruit.com/adafruit-io/arduino  
+
