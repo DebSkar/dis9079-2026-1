@@ -1,4 +1,4 @@
-# ⋆⭒˚.⋆ └[∵┌] - Apuntes Camila Parada - Investigaciones individuales [┐∵]┘ ⋆.˚⭒⋆
+# ⋆⭒˚.⋆ └[∵┌] - Camila Parada - Investigaciones individuales [┐∵]┘ ⋆.˚⭒⋆
 
 Lunes 13 Abril 2026
 
