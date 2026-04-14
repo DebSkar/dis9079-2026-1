@@ -155,9 +155,12 @@ rellenar en el mismo orden que los integrantes del grupo
 
 ## Bibliografía
 
-Adafruit IO <https://learn.adafruit.com/adafruit-io/arduino>
-Adafruit IO overview <https://io.adafruit.com/vxlentiinaa/overview>
-Arduino libraries Adafruit IO <https://docs.arduino.cc/libraries/adafruit-io-arduino/>
-Github Adafruit IO <https://github.com/adafruit/Adafruit_IO_Arduino>
-Adafruit IO basics color <https://learn.adafruit.com/adafruit-io-basics-color>
-Arduino cheat sheet <http://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/?utm_source=chatgpt.com>
+**Adafruit IO** <https://learn.adafruit.com/adafruit-io/arduino>
+
+**Arduino libraries Adafruit IO** <https://docs.arduino.cc/libraries/adafruit-io-arduino/>
+
+**Github Adafruit IO** <https://github.com/adafruit/Adafruit_IO_Arduino>
+
+**Adafruit IO basics color** <https://learn.adafruit.com/adafruit-io-basics-color>
+
+**Arduino cheat sheet** <http://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/?utm_source=chatgpt.com>
